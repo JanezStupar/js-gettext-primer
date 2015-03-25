@@ -1,0 +1,4 @@
+# Configurations and util directories
+.idea/
+.~lock*
+node_modules/

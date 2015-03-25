@@ -1,0 +1,37 @@
+{
+  "name": "js-gettext-primer",
+  "description": "An example implementation of Gettext translation protocol for JavaScript applications.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/JanezStupar/js-gettext-primer",
+  "author": {
+    "name": "Janez Štupar",
+    "url": "https://github.com/JanezStupar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:JanezStupar/js-gettext-primer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JanezStupar/js-gettext-primer/issues"
+  },
+  "license": "MIT",
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.1.0"
+  },
+  "dependencies": {
+    "jsxgettext": "0.6.3",
+    "grunt-jsxgettext": "git+https://github.com/JanezStupar/grunt-jsxgettext.git",
+    "po2json": "0.4.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.11.1",
+    "grunt-cli": "^0.1.13"
+  },
+  "peerDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
