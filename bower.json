@@ -1,0 +1,26 @@
+{
+  "name": "js-gettext-primer",
+  "version": "0.0.1",
+  "homepage": "https://github.com/JanezStupar/js-gettext-primer",
+  "authors": [
+    "Janez Stupar"
+  ],
+  "description": "An example implementation of Gettext translation protocol for JavaScript applications.",
+  "main": "src/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jed": "~1.1.0",
+    "marionette": "~2.4.1",
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.3",
+    "jade": "~1.9.2",
+    "bootstrap-stylus": "~4.0.3"
+  }
+}
