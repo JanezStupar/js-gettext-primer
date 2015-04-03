@@ -6,7 +6,6 @@ html
     head
         title= title
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        //link(rel='stylesheet', href='/style/css/bootstrap-theme.min.css')
         link(rel='stylesheet', href='/style/css/style.css')
         style(type='text/css').
             body { padding-bottom: 40px; }
@@ -15,27 +14,13 @@ html
     body
         .navbar.navbar-default.navbar-static-top(role='navigation')
             .container
-                .navbar-header
-                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-                        span.sr-only Toggle navigation
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
-                    a.navbar-brand(href='#') #{brand}
-                .navbar-collapse.collapse
-                    ul.nav.navbar-nav
-                        - var obj = { 'home':'Home', 'about':'About' }
-                        - each val, key in obj
-                            if (id == key)
-                                li.active
-                                    a(href='#{key}') #{val}
-                            else
-                                li
-                                    a(href='#{key}') #{val}
-        block content
+                .content-region
+
+        .container.app-content
+            .content-region
 
     footer
-        p &copy; #{brand}
+        p &copy; #{facts.brand}
 
     .scripts
         - if(debug == true)

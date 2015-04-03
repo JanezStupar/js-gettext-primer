@@ -2,15 +2,24 @@
   requirejs.config({
     enforceDefine: true,
     paths: {
-      jquery: 'bower_components/jquery/jquery.min',
+      text: 'bower_components/requirejs-text/text',
+      jquery: 'bower_components/jquery/dist/jquery.min',
       jade: 'bower_components/jade/runtime',
+      underscore: "bower_components/underscore/underscore",
+      backbone: "bower_components/backbone/backbone",
+      marionette: "bower_components/marionette/lib/backbone.marionette",
       app: "scripts/js/app",
-      template: "scripts/js/templates"
+      templates: "scripts/js/templates",
+      config: "scripts/js/app/config",
+      view: 'scripts/js/app/view'
     }
   });
 
-  define(['template'], function(templates) {
-    return console.log('app is alive');
+  define(['app/application'], function(Application) {
+    var app;
+    console.log('app is alive');
+    app = new Application();
+    return app.start();
   });
 
 }).call(this);

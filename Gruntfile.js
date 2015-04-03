@@ -2,12 +2,20 @@ module.exports = function(grunt) {
 
     "use strict";
 
+    var spa_middleware = function(connect, options, middlewares) {
+        var modRewrite = require('connect-modrewrite');
+
+        middlewares.unshift(modRewrite(["!\\.html|\\.js|\\.svg|\\.css|\\.png$ /index.html [L]"]));
+
+        return middlewares;
+    };
+
     grunt.initConfig({
         coffee: {
             compile: {
                 expand: true,
-                flatten: true,
-                src: ["src/scripts/coffee/**/*.coffee"],
+                cwd: 'src/scripts/coffee',
+                src: ["**/*.coffee"],
                 dest: "src/scripts/js/",
                 ext: '.js'
             }
@@ -26,12 +34,21 @@ module.exports = function(grunt) {
             }
         },
         jshint: {
-            all: ["src/scripts/**/*.js", "src/scripts/**/*.json", "!src/scripts/js/templates.js"]
+            all: ["src/scripts/js/**/*.json", "!src/scripts/js/templates.js"]
+        },
+        coffee_jshint: {
+            options: {
+                globals: ['requirejs', 'define', 'console', '$']
+            },
+            all: ["src/scripts/coffee/**/*.coffee"]
         },
         jade: {
             index: {
                 options: {
-                    pretty: true
+                    pretty: true,
+                    data : {
+                        facts: grunt.file.readJSON("src/scripts/js/app/config/facts.json")
+                    }
                 },
                 files: {
                     "build/index.html": ["src/jade/**/*.jade", "!src/jade/**/_*.jade"]
@@ -41,7 +58,8 @@ module.exports = function(grunt) {
                 options: {
                     pretty: true,
                     data : {
-                        debug: true
+                        debug: true,
+                        facts: grunt.file.readJSON("src/scripts/js/app/config/facts.json")
                     }
                 },
                 files: {
@@ -70,6 +88,7 @@ module.exports = function(grunt) {
                     base: 'build',
                     open: true,
                     keepalive: true,
+                    middleware: spa_middleware,
                     livereload: 9999
                 }
             },
@@ -79,6 +98,7 @@ module.exports = function(grunt) {
                     port: '8889',
                     base: ['src', 'node_modules/grunt-contrib-requirejs/node_modules/requirejs/'],
                     open: true,
+                    middleware: spa_middleware,
                     livereload: 9999
                 }
             }
@@ -109,11 +129,12 @@ module.exports = function(grunt) {
 
     loadGruntContribTasks(['jshint', 'coffee', 'requirejs', 'jade', 'watch', 'connect', 'stylus']);
 
+    grunt.loadNpmTasks('grunt-coffee-jshint');
     grunt.loadNpmTasks('grunt-jsxgettext');
     grunt.loadNpmTasks('grunt-po2json');
 
 
-    grunt.registerTask('default', ['jshint', 'coffee', 'jade', 'stylus', 'requirejs']);
+    grunt.registerTask('default', ['coffee', 'coffee_jshint', 'jade', 'stylus', 'jshint', 'requirejs']);
     grunt.registerTask('dev', ['default', 'connect:dev', 'watch:default']);
     grunt.registerTask('local', ['default', 'connect:local']);
 };
