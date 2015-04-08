@@ -1,9 +1,12 @@
 (function() {
-  define(['backbone', 'marionette', 'templates', 'text!config/nav.json'], function(Backbone, Marionette, templates, data) {
+  define(['backbone', 'marionette', 'templates', 'l10n'], function(Backbone, Marionette, templates, l10n) {
     return Marionette.ItemView.extend({
       initialize: function(options) {
         return this.model = new Backbone.Model({
-          nav: JSON.parse(data)
+          nav: {
+            home: l10n.gettext("Home"),
+            about: l10n.gettext("About")
+          }
         });
       },
       ui: {
@@ -17,10 +20,9 @@
         var el;
         e.preventDefault();
         el = $(e.currentTarget);
-        Backbone.history.navigate(el.children().attr("href"), {
+        return Backbone.history.navigate(el.children().attr("href"), {
           trigger: true
         });
-        return console.log('clicked');
       }
     });
   });

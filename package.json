@@ -26,8 +26,7 @@
     "grunt-contrib-stylus": "^0.21.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jsxgettext": "git+https://github.com/JanezStupar/grunt-jsxgettext.git",
-    "jsxgettext": "0.6.3",
-    "po2json": "0.4.1"
+    "grunt-po2json": "^0.3.0"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "^0.11.1",

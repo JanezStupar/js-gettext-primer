@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         },
         coffee_jshint: {
             options: {
-                globals: ['requirejs', 'define', 'console', '$']
+                globals: ['requirejs', 'define', 'console', '$', 'window']
             },
             all: ["src/scripts/coffee/**/*.coffee"]
         },
@@ -68,6 +68,7 @@ module.exports = function(grunt) {
             },
             templates: {
                 options: {
+                    globals: ['gettext'],
                     amd: true,
                     client: true,
                     namespace: "App.Templates",
@@ -118,6 +119,32 @@ module.exports = function(grunt) {
                     "src/style/css/style.css": ["src/style/styl/**/*.styl"]
                 }
             }
+        },
+        jsxgettext: {
+            extract: {
+                files: [{
+                    src: ['./src/scripts/**/*.*js', './src/jade/**/*.*jade', '!./**/scripts/bower_components/**'],
+                    'output-dir': './src/translations/',
+                    output: 'en_US.po'
+                }],
+                options: {
+                    'join-existing': true,
+                    keyword: ['gettext', 'dgettext', 'dcgettext', 'ngettext', 'dngettext', 'dcngettext',
+                        'pgettext', 'dpgettext', 'npgettext', 'dnpgettext', 'dcnpgettext'
+                    ]
+                }
+            }
+        },
+        po2json: {
+            options: {
+                format: 'jed',
+                domain: 'client',
+                requireJs: true
+            },
+            all: {
+                src: './src/translations/*.po',
+                dest: './src/scripts/translations/'
+            }
         }
     });
 
@@ -137,4 +164,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['coffee', 'coffee_jshint', 'jade', 'stylus', 'jshint', 'requirejs']);
     grunt.registerTask('dev', ['default', 'connect:dev', 'watch:default']);
     grunt.registerTask('local', ['default', 'connect:local']);
+    grunt.registerTask('gettext-extract', ['jsxgettext:extract']);
+    grunt.registerTask('gettext-compile', ['po2json']);
 };

@@ -1,9 +1,12 @@
-define(['backbone', 'marionette', 'templates', 'text!config/nav.json'],
-  (Backbone, Marionette, templates, data) ->
+define(['backbone', 'marionette', 'templates', 'l10n'],
+  (Backbone, Marionette, templates, l10n) ->
     return Marionette.ItemView.extend(
       initialize: (options) ->
         this.model = new Backbone.Model(
-          nav: JSON.parse(data)
+          nav:
+            home: l10n.gettext("Home")
+            about: l10n.gettext("About")
+
         )
 
       ui:
@@ -18,6 +21,5 @@ define(['backbone', 'marionette', 'templates', 'text!config/nav.json'],
         e.preventDefault();
         el = $(e.currentTarget)
         Backbone.history.navigate(el.children().attr("href"), trigger: true)
-        console.log('clicked')
     )
 )
