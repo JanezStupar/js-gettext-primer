@@ -4,5 +4,6 @@ define(['backbone', 'marionette'],
       appRoutes:
         "home": "home"
         "about": "home"
+        "(/)": "home"
     )
 )

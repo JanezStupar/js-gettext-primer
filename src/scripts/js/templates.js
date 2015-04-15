@@ -3,6 +3,14 @@ define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { ja
 this["App"] = this["App"] || {};
 this["App"]["Templates"] = this["App"]["Templates"] || {};
 
+this["App"]["Templates"]["_content_base"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+
+buf.push("<!--Created by janez on 4/9/15.--><div class=\"col-md-8\"><h1>" + (jade.escape((jade_interp = gettext("Welcome to js-gettext-primer")) == null ? '' : jade_interp)) + "</h1><p>" + (jade.escape((jade_interp = gettext("This primer is a work in progress. Content coming soon (tm)!")) == null ? '' : jade_interp)) + "</p></div>");;return buf.join("");
+};
+
 this["App"]["Templates"]["_navigation"] = function template(locals) {
 var buf = [];
 var jade_mixins = {};

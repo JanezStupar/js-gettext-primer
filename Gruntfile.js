@@ -123,7 +123,7 @@ module.exports = function(grunt) {
         jsxgettext: {
             extract: {
                 files: [{
-                    src: ['./src/scripts/**/*.*js', './src/jade/**/*.*jade', '!./**/scripts/bower_components/**'],
+                    src: ['./src/scripts/**/*.*js', './src/jade/**/*.*jade', '!./**/scripts/bower_components/**', '!./src/scripts/js/templates.js'],
                     'output-dir': './src/translations/',
                     output: 'en_US.po'
                 }],

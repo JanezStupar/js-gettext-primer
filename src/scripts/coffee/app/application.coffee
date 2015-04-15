@@ -18,7 +18,9 @@ define(['backbone','marionette', 'app/router', 'app/controller', 'view/navigatio
         @layout.nav.show(new Navigation())
 
         new Router(
-          controller: new Controller()
+          controller: new Controller(
+            app: this
+          )
         )
 
         Backbone.history.start(

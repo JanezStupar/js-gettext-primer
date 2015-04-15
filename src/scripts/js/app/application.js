@@ -16,7 +16,9 @@
       onStart: function(options) {
         this.layout.nav.show(new Navigation());
         new Router({
-          controller: new Controller()
+          controller: new Controller({
+            app: this
+          })
         });
         return Backbone.history.start({
           pushState: true,

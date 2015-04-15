@@ -3,7 +3,8 @@
     return Marionette.AppRouter.extend({
       appRoutes: {
         "home": "home",
-        "about": "home"
+        "about": "home",
+        "(/)": "home"
       }
     });
   });
