@@ -28,6 +28,9 @@ to effectively translate relevant text.
 
 After translators are done, PO files are compiled into a MO format, which is used by standard gettext tools.
 Or in our case, we compile PO files into JavaScript or JSON for usage in webapp frontend.
+
+Last the compiled translation files are utilized by the application runtime to deliver correctly translated texts to
+the user.
     
 # Coming soon(tm)
 * Discussion on commonly used translation mechanisms.

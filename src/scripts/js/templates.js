@@ -8,7 +8,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<!--Created by janez on 4/9/15.--><div class=\"col-md-8\"><h1>" + (jade.escape((jade_interp = gettext("Welcome to js-gettext-primer")) == null ? '' : jade_interp)) + "</h1><p>" + (jade.escape((jade_interp = gettext("This primer is a work in progress. Content coming soon (tm)! But feel free to have a look around the code. There is a full JavaScript Gettext implementation present.")) == null ? '' : jade_interp)) + "</p></div>");;return buf.join("");
+buf.push("<!--Created by janez on 4/9/15.--><div class=\"col-md-8\"><h1>" + (jade.escape((jade_interp = gettext("Welcome to js-gettext-primer")) == null ? '' : jade_interp)) + "</h1><p>" + (jade.escape((jade_interp = gettext("This primer is a work in progress. Content coming soon (tm)!")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("However there is a full JavaScript gettext implementation present. Feel free to have a look around the code.")) == null ? '' : jade_interp)) + "</p></div>");;return buf.join("");
 };
 
 this["App"]["Templates"]["_navigation"] = function template(locals) {

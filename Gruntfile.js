@@ -11,6 +11,18 @@ module.exports = function(grunt) {
     };
 
     grunt.initConfig({
+        copy: {
+            local: {
+                files: [
+                    {
+                        expand: true, cwd: 'src/', src: ['scripts/translations/**'], dest: 'build/'
+                    },
+                    {
+                        expand: true, cwd: 'src/', src: ['style/css/**'], dest: 'build/'
+                    }
+                ]
+            }
+        },
         coffee: {
             compile: {
                 expand: true,
@@ -28,7 +40,6 @@ module.exports = function(grunt) {
                     include: ['../node_modules/grunt-contrib-requirejs/node_modules/requirejs/require', 'scripts/js/main'],
                     insertRequire: ['scripts/js/main'],
                     out: "build/scripts/js/js-gettext-primer.js",
-                    wrap: true,
                     optimize: 'none'
                 }
             }
@@ -89,8 +100,7 @@ module.exports = function(grunt) {
                     base: 'build',
                     open: true,
                     keepalive: true,
-                    middleware: spa_middleware,
-                    livereload: 9999
+                    middleware: spa_middleware
                 }
             },
             dev: {
@@ -105,6 +115,9 @@ module.exports = function(grunt) {
             }
         },
         watch: {
+            options: {
+                livereload: 9999
+            },
             default: {
                 files: ['src/**', 'Gruntfile.js'],
                 tasks: 'default'
@@ -154,7 +167,7 @@ module.exports = function(grunt) {
         });
     }
 
-    loadGruntContribTasks(['jshint', 'coffee', 'requirejs', 'jade', 'watch', 'connect', 'stylus']);
+    loadGruntContribTasks(['jshint', 'coffee', 'requirejs', 'jade', 'watch', 'connect', 'stylus', 'copy']);
 
     grunt.loadNpmTasks('grunt-coffee-jshint');
     grunt.loadNpmTasks('grunt-jsxgettext');
