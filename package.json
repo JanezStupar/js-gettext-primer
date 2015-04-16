@@ -1,6 +1,6 @@
 {
   "name": "js-gettext-primer",
-  "description": "An example implementation of Gettext translation protocol for JavaScript applications.",
+  "description": "An example implementation of gettext translation protocol for JavaScript applications.",
   "version": "0.0.1",
   "homepage": "https://github.com/JanezStupar/js-gettext-primer",
   "author": {
