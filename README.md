@@ -12,7 +12,7 @@ You can use this project as a template for your JavaScript application or as an 
     $ git clone git@github.com:JanezStupar/js-gettext-primer.git
     $ sudo npm install
     $ bower install
-    $ grunt dev
+    $ grunt local
     
 # How it works
 [GNU gettext](https://www.gnu.org/software/gettext/) is a translation toolkit used in many Open Source, Free Software
