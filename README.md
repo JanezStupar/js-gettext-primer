@@ -1,5 +1,5 @@
 # About
-See how easy it is to use proper translation toolkit in your JavaScript application. 
+[See how easy it is to use proper translation toolkit in your JavaScript application.](js-gettext-primer.janezstupar.com)
 
 Stop relying on well meant but ultimately horribly harmful solutions such as requirejs/i18n, jquery.18n, etc...
 
