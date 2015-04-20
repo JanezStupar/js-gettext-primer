@@ -3,29 +3,31 @@
 doctype html
 html
 
-    head
-        title= title
-        meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        link(rel='stylesheet', href='style/css/style.css')
-        style(type='text/css').
-            body { padding-bottom: 40px; }
-            .sidebar-nav { padding: 9px 0; }
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='style/css/style.css')
+    style(type='text/css').
+      main { padding-bottom: 40px; }
+      .sidebar-nav { padding: 9px 0; }
 
-    body
-        .navbar.navbar-default.navbar-static-top(role='navigation')
-            .container
-                .content-region
+  body
+    .navbar.navbar-default.navbar-static-top(role='navigation')
+      .container
+        .content-region
 
-        .container.app-content
-            .content-region
+    main
+      .container.app-content
+        .content-region
 
     footer
+      .container
         p &copy; #{facts.brand}
 
-    .scripts
-        - if(debug == true)
-            script(src='/require.js')
-            script.
-                require({baseUrl: '/'}, ['scripts/js/main'])
-        - else
-            script(src='scripts/js/js-gettext-primer.js')
+  .scripts
+    - if(debug == true)
+      script(src='/require.js')
+      script.
+        require({baseUrl: '/'}, ['scripts/js/main'])
+    - else
+      script(src='scripts/js/js-gettext-primer.js')
