@@ -24,7 +24,7 @@ define(['backbone','marionette', 'app/router', 'app/controller', 'view/navigatio
         )
 
         Backbone.history.start(
-          pushState: true
+          pushState: false
           root: "/"
         )
     )
