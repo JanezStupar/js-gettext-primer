@@ -10732,7 +10732,7 @@ return this["App"]["Templates"];
           })
         });
         return Backbone.history.start({
-          pushState: true,
+          pushState: false,
           root: "/"
         });
       }
