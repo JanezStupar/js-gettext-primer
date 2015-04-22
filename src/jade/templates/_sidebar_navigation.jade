@@ -1,0 +1,13 @@
+//
+   Created by janez on 4/20/15.
+nav.col-xs-3.bs-nav-sidebar.hidden-print.hidden-xs.hidden-sm
+  ul#sidebar.nav.nav-stacked(data-spy="affix")
+    - each group, i in groups
+      li
+        a(href="##{group.href}") #{group.title}
+        if group.children
+          ul.nav.nav-stacked
+            - each subgroup, j in group.children
+              li
+                a(href="##{subgroup.href}") #{subgroup.title}
+

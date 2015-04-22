@@ -10346,9 +10346,8 @@ define('text!config/facts.json',[],function () { return '{\n  "brand": "Janez St
   define('app/router',['backbone', 'marionette'], function(Backbone, Marionette) {
     return Marionette.AppRouter.extend({
       appRoutes: {
-        "home": "home",
-        "about": "home",
-        "(/)": "home"
+        "home(_:section)": "home",
+        "(/)": "routeHome"
       }
     });
   });
@@ -10602,8 +10601,8 @@ this["App"]["Templates"]["_content_base"] = function template(locals) {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
-
-buf.push("<!--Created by janez on 4/9/15.--><div class=\"col-md-8\"><h1>" + (jade.escape((jade_interp = gettext("Welcome to js-gettext-primer")) == null ? '' : jade_interp)) + "</h1><p>" + (jade.escape((jade_interp = gettext("This primer is a work in progress. Content coming soon (tm)!")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("However there is a full JavaScript gettext implementation present. Feel free to have a look around the code.")) == null ? '' : jade_interp)) + "</p></div>");;return buf.join("");
+;var locals_for_with = (locals || {});(function (page) {
+buf.push("<!--Created by janez on 4/9/15.--><div><h1" + (jade.attr("id", "" + (page) + "welcome", true, false)) + (jade.attr("data-nav-label", '' + (gettext("Welcome")) + '', true, false)) + ">" + (jade.escape((jade_interp = gettext("Welcome to js-gettext-primer")) == null ? '' : jade_interp)) + "</h1><p>" + (jade.escape((jade_interp = gettext("This primer is a work in progress. Content coming soon (tm)!")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("However there is a full JavaScript gettext implementation present. Feel free to have a look around the code.")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><h2" + (jade.attr("id", "" + (page) + "welcome-sub", true, false)) + (jade.attr("data-nav-label", '' + (gettext("Subtitle")) + '', true, false)) + (jade.attr("data-nav-parent", '' + (page) + 'welcome', true, false)) + ">" + (jade.escape((jade_interp = gettext("This is a subtitle")) == null ? '' : jade_interp)) + "</h2><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><h1" + (jade.attr("id", "" + (page) + "another-title", true, false)) + (jade.attr("data-nav-label", '' + (gettext("Another title")) + '', true, false)) + ">" + (jade.escape((jade_interp = gettext("This is another h1")) == null ? '' : jade_interp)) + "</h1><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><h2" + (jade.attr("id", "" + (page) + "antoher-title-sub", true, false)) + (jade.attr("data-nav-label", '' + (gettext("Another subtitle")) + '', true, false)) + (jade.attr("data-nav-parent", "" + (page) + "another-title", true, false)) + ">" + (jade.escape((jade_interp = gettext("Test it out")) == null ? '' : jade_interp)) + "</h2><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p><p>" + (jade.escape((jade_interp = gettext("I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here I have something something to say here ")) == null ? '' : jade_interp)) + "</p></div>");}.call(this,"page" in locals_for_with?locals_for_with.page:typeof page!=="undefined"?page:undefined));;return buf.join("");
 };
 
 this["App"]["Templates"]["_navigation"] = function template(locals) {
@@ -10651,27 +10650,172 @@ buf.push("<li><a" + (jade.attr("href", '' + (key) + '', true, false)) + ">" + (j
 buf.push("</ul></div>");}.call(this,"brand" in locals_for_with?locals_for_with.brand:typeof brand!=="undefined"?brand:undefined,"id" in locals_for_with?locals_for_with.id:typeof id!=="undefined"?id:undefined,"nav" in locals_for_with?locals_for_with.nav:typeof nav!=="undefined"?nav:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
 };
 
+this["App"]["Templates"]["_sidebar_navigation"] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (groups, undefined) {
+buf.push("<!--Created by janez on 4/20/15.--><nav class=\"col-xs-3 bs-nav-sidebar hidden-print hidden-xs hidden-sm\"><ul id=\"sidebar\" data-spy=\"affix\" class=\"nav nav-stacked\">");
+// iterate groups
+;(function(){
+  var $$obj = groups;
+  if ('number' == typeof $$obj.length) {
+
+    for (var i = 0, $$l = $$obj.length; i < $$l; i++) {
+      var group = $$obj[i];
+
+buf.push("<li><a" + (jade.attr("href", "#" + (group.href) + "", true, false)) + ">" + (jade.escape((jade_interp = group.title) == null ? '' : jade_interp)) + "</a>");
+if ( group.children)
+{
+buf.push("<ul class=\"nav nav-stacked\">");
+// iterate group.children
+;(function(){
+  var $$obj = group.children;
+  if ('number' == typeof $$obj.length) {
+
+    for (var j = 0, $$l = $$obj.length; j < $$l; j++) {
+      var subgroup = $$obj[j];
+
+buf.push("<li><a" + (jade.attr("href", "#" + (subgroup.href) + "", true, false)) + ">" + (jade.escape((jade_interp = subgroup.title) == null ? '' : jade_interp)) + "</a></li>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var j in $$obj) {
+      $$l++;      var subgroup = $$obj[j];
+
+buf.push("<li><a" + (jade.attr("href", "#" + (subgroup.href) + "", true, false)) + ">" + (jade.escape((jade_interp = subgroup.title) == null ? '' : jade_interp)) + "</a></li>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</ul>");
+}
+buf.push("</li>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var i in $$obj) {
+      $$l++;      var group = $$obj[i];
+
+buf.push("<li><a" + (jade.attr("href", "#" + (group.href) + "", true, false)) + ">" + (jade.escape((jade_interp = group.title) == null ? '' : jade_interp)) + "</a>");
+if ( group.children)
+{
+buf.push("<ul class=\"nav nav-stacked\">");
+// iterate group.children
+;(function(){
+  var $$obj = group.children;
+  if ('number' == typeof $$obj.length) {
+
+    for (var j = 0, $$l = $$obj.length; j < $$l; j++) {
+      var subgroup = $$obj[j];
+
+buf.push("<li><a" + (jade.attr("href", "#" + (subgroup.href) + "", true, false)) + ">" + (jade.escape((jade_interp = subgroup.title) == null ? '' : jade_interp)) + "</a></li>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var j in $$obj) {
+      $$l++;      var subgroup = $$obj[j];
+
+buf.push("<li><a" + (jade.attr("href", "#" + (subgroup.href) + "", true, false)) + ">" + (jade.escape((jade_interp = subgroup.title) == null ? '' : jade_interp)) + "</a></li>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</ul>");
+}
+buf.push("</li>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</ul></nav>");}.call(this,"groups" in locals_for_with?locals_for_with.groups:typeof groups!=="undefined"?groups:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+
 return this["App"]["Templates"];
 
 });
 (function() {
-  define('view/content',['backbone', 'marionette', 'l10n', 'templates'], function(Backbone, Marionette, l10n, templates) {
+  define('view/content',['underscore', 'backbone', 'marionette', 'l10n', 'templates'], function(_, Backbone, Marionette, l10n, templates) {
     return Marionette.ItemView.extend({
-      template: templates._content_base
+      serializeData: function(model) {
+        var page;
+        page = this.options.page ? this.options.page + "_" : "";
+        return {
+          page: page
+        };
+      },
+      template: templates._content_base,
+      collectNav: function() {
+        return _.map(this.$('h1'), (function(_this) {
+          return function(e, i) {
+            var retVal, subgroups;
+            e = $(e);
+            if (!_.isUndefined(e.data('navLabel')) && !_.isUndefined(e.attr('id'))) {
+              retVal = {
+                href: e.attr('id'),
+                title: e.data('navLabel')
+              };
+              subgroups = _this.$('[data-nav-parent="' + e.attr("id") + '"]');
+              if (subgroups.length > 0) {
+                subgroups = _.map(subgroups, function(elem, index) {
+                  elem = $(elem);
+                  if (!_.isUndefined(elem.data('navLabel')) && !_.isUndefined(elem.attr('id'))) {
+                    return {
+                      href: elem.attr('id'),
+                      title: elem.data('navLabel')
+                    };
+                  }
+                });
+                retVal = _.extend(retVal, {
+                  children: subgroups
+                });
+              }
+              return retVal;
+            }
+          };
+        })(this));
+      },
+      onShow: function() {
+        var el;
+        this.options.commandChannel.execute('sidebar:update', this.collectNav(), this.hash);
+        if (!_.isUndefined(this.options.section)) {
+          el = this.$("#" + this.options.page + "_" + this.options.section);
+          if (el.length > 0) {
+            return $(document).scrollTop(el.offset().top - 10);
+          }
+        }
+      }
     });
   });
 
 }).call(this);
 
 (function() {
-  define('app/controller',['backbone', 'marionette', 'view/content'], function(Backbone, Marionette, ContentView) {
+  define('app/controller',['underscore', 'backbone', 'marionette', 'view/content'], function(_, Backbone, Marionette, ContentView) {
     return Marionette.Controller.extend({
       initialize: function(options) {
         return this.app = options.app;
       },
-      home: function() {
-        console.log('home view');
-        return this.app.layout.content.show(new ContentView());
+      home: function(section) {
+        if (!((!_.isUndefined(this.app.layout.content.currentView)) && this.app.layout.content.currentView.options.page === 'home')) {
+          console.log('home view');
+          return this.app.layout.content.show(new ContentView({
+            commandChannel: this.app.commandChannel,
+            page: 'home',
+            section: section
+          }));
+        }
+      },
+      routeHome: function() {
+        return Backbone.history.navigate("home", {
+          trigger: true
+        });
       }
     });
   });
@@ -10709,12 +10853,397 @@ return this["App"]["Templates"];
 
 }).call(this);
 
+/* ========================================================================
+ * Bootstrap: scrollspy.js v3.3.4
+ * http://getbootstrap.com/javascript/#scrollspy
+ * ========================================================================
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+  
+
+  // SCROLLSPY CLASS DEFINITION
+  // ==========================
+
+  function ScrollSpy(element, options) {
+    this.$body          = $(document.body)
+    this.$scrollElement = $(element).is(document.body) ? $(window) : $(element)
+    this.options        = $.extend({}, ScrollSpy.DEFAULTS, options)
+    this.selector       = (this.options.target || '') + ' .nav li > a'
+    this.offsets        = []
+    this.targets        = []
+    this.activeTarget   = null
+    this.scrollHeight   = 0
+
+    this.$scrollElement.on('scroll.bs.scrollspy', $.proxy(this.process, this))
+    this.refresh()
+    this.process()
+  }
+
+  ScrollSpy.VERSION  = '3.3.4'
+
+  ScrollSpy.DEFAULTS = {
+    offset: 10
+  }
+
+  ScrollSpy.prototype.getScrollHeight = function () {
+    return this.$scrollElement[0].scrollHeight || Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
+  }
+
+  ScrollSpy.prototype.refresh = function () {
+    var that          = this
+    var offsetMethod  = 'offset'
+    var offsetBase    = 0
+
+    this.offsets      = []
+    this.targets      = []
+    this.scrollHeight = this.getScrollHeight()
+
+    if (!$.isWindow(this.$scrollElement[0])) {
+      offsetMethod = 'position'
+      offsetBase   = this.$scrollElement.scrollTop()
+    }
+
+    this.$body
+      .find(this.selector)
+      .map(function () {
+        var $el   = $(this)
+        var href  = $el.data('target') || $el.attr('href')
+        var $href = /^#./.test(href) && $(href)
+
+        return ($href
+          && $href.length
+          && $href.is(':visible')
+          && [[$href[offsetMethod]().top + offsetBase, href]]) || null
+      })
+      .sort(function (a, b) { return a[0] - b[0] })
+      .each(function () {
+        that.offsets.push(this[0])
+        that.targets.push(this[1])
+      })
+  }
+
+  ScrollSpy.prototype.process = function () {
+    var scrollTop    = this.$scrollElement.scrollTop() + this.options.offset
+    var scrollHeight = this.getScrollHeight()
+    var maxScroll    = this.options.offset + scrollHeight - this.$scrollElement.height()
+    var offsets      = this.offsets
+    var targets      = this.targets
+    var activeTarget = this.activeTarget
+    var i
+
+    if (this.scrollHeight != scrollHeight) {
+      this.refresh()
+    }
+
+    if (scrollTop >= maxScroll) {
+      return activeTarget != (i = targets[targets.length - 1]) && this.activate(i)
+    }
+
+    if (activeTarget && scrollTop < offsets[0]) {
+      this.activeTarget = null
+      return this.clear()
+    }
+
+    for (i = offsets.length; i--;) {
+      activeTarget != targets[i]
+        && scrollTop >= offsets[i]
+        && (offsets[i + 1] === undefined || scrollTop < offsets[i + 1])
+        && this.activate(targets[i])
+    }
+  }
+
+  ScrollSpy.prototype.activate = function (target) {
+    this.activeTarget = target
+
+    this.clear()
+
+    var selector = this.selector +
+      '[data-target="' + target + '"],' +
+      this.selector + '[href="' + target + '"]'
+
+    var active = $(selector)
+      .parents('li')
+      .addClass('active')
+
+    if (active.parent('.dropdown-menu').length) {
+      active = active
+        .closest('li.dropdown')
+        .addClass('active')
+    }
+
+    active.trigger('activate.bs.scrollspy')
+  }
+
+  ScrollSpy.prototype.clear = function () {
+    $(this.selector)
+      .parentsUntil(this.options.target, '.active')
+      .removeClass('active')
+  }
+
+
+  // SCROLLSPY PLUGIN DEFINITION
+  // ===========================
+
+  function Plugin(option) {
+    return this.each(function () {
+      var $this   = $(this)
+      var data    = $this.data('bs.scrollspy')
+      var options = typeof option == 'object' && option
+
+      if (!data) $this.data('bs.scrollspy', (data = new ScrollSpy(this, options)))
+      if (typeof option == 'string') data[option]()
+    })
+  }
+
+  var old = $.fn.scrollspy
+
+  $.fn.scrollspy             = Plugin
+  $.fn.scrollspy.Constructor = ScrollSpy
+
+
+  // SCROLLSPY NO CONFLICT
+  // =====================
+
+  $.fn.scrollspy.noConflict = function () {
+    $.fn.scrollspy = old
+    return this
+  }
+
+
+  // SCROLLSPY DATA-API
+  // ==================
+
+  $(window).on('load.bs.scrollspy.data-api', function () {
+    $('[data-spy="scroll"]').each(function () {
+      var $spy = $(this)
+      Plugin.call($spy, $spy.data())
+    })
+  })
+
+}(jQuery);
+
+define("bootstrap/scrollspy", ["jquery"], (function (global) {
+    return function () {
+        var ret, fn;
+        return ret || global.$.fn.scrollspy;
+    };
+}(this)));
+
+/* ========================================================================
+ * Bootstrap: affix.js v3.3.4
+ * http://getbootstrap.com/javascript/#affix
+ * ========================================================================
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+  
+
+  // AFFIX CLASS DEFINITION
+  // ======================
+
+  var Affix = function (element, options) {
+    this.options = $.extend({}, Affix.DEFAULTS, options)
+
+    this.$target = $(this.options.target)
+      .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
+      .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
+
+    this.$element     = $(element)
+    this.affixed      = null
+    this.unpin        = null
+    this.pinnedOffset = null
+
+    this.checkPosition()
+  }
+
+  Affix.VERSION  = '3.3.4'
+
+  Affix.RESET    = 'affix affix-top affix-bottom'
+
+  Affix.DEFAULTS = {
+    offset: 0,
+    target: window
+  }
+
+  Affix.prototype.getState = function (scrollHeight, height, offsetTop, offsetBottom) {
+    var scrollTop    = this.$target.scrollTop()
+    var position     = this.$element.offset()
+    var targetHeight = this.$target.height()
+
+    if (offsetTop != null && this.affixed == 'top') return scrollTop < offsetTop ? 'top' : false
+
+    if (this.affixed == 'bottom') {
+      if (offsetTop != null) return (scrollTop + this.unpin <= position.top) ? false : 'bottom'
+      return (scrollTop + targetHeight <= scrollHeight - offsetBottom) ? false : 'bottom'
+    }
+
+    var initializing   = this.affixed == null
+    var colliderTop    = initializing ? scrollTop : position.top
+    var colliderHeight = initializing ? targetHeight : height
+
+    if (offsetTop != null && scrollTop <= offsetTop) return 'top'
+    if (offsetBottom != null && (colliderTop + colliderHeight >= scrollHeight - offsetBottom)) return 'bottom'
+
+    return false
+  }
+
+  Affix.prototype.getPinnedOffset = function () {
+    if (this.pinnedOffset) return this.pinnedOffset
+    this.$element.removeClass(Affix.RESET).addClass('affix')
+    var scrollTop = this.$target.scrollTop()
+    var position  = this.$element.offset()
+    return (this.pinnedOffset = position.top - scrollTop)
+  }
+
+  Affix.prototype.checkPositionWithEventLoop = function () {
+    setTimeout($.proxy(this.checkPosition, this), 1)
+  }
+
+  Affix.prototype.checkPosition = function () {
+    if (!this.$element.is(':visible')) return
+
+    var height       = this.$element.height()
+    var offset       = this.options.offset
+    var offsetTop    = offset.top
+    var offsetBottom = offset.bottom
+    var scrollHeight = $(document.body).height()
+
+    if (typeof offset != 'object')         offsetBottom = offsetTop = offset
+    if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
+    if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
+
+    var affix = this.getState(scrollHeight, height, offsetTop, offsetBottom)
+
+    if (this.affixed != affix) {
+      if (this.unpin != null) this.$element.css('top', '')
+
+      var affixType = 'affix' + (affix ? '-' + affix : '')
+      var e         = $.Event(affixType + '.bs.affix')
+
+      this.$element.trigger(e)
+
+      if (e.isDefaultPrevented()) return
+
+      this.affixed = affix
+      this.unpin = affix == 'bottom' ? this.getPinnedOffset() : null
+
+      this.$element
+        .removeClass(Affix.RESET)
+        .addClass(affixType)
+        .trigger(affixType.replace('affix', 'affixed') + '.bs.affix')
+    }
+
+    if (affix == 'bottom') {
+      this.$element.offset({
+        top: scrollHeight - height - offsetBottom
+      })
+    }
+  }
+
+
+  // AFFIX PLUGIN DEFINITION
+  // =======================
+
+  function Plugin(option) {
+    return this.each(function () {
+      var $this   = $(this)
+      var data    = $this.data('bs.affix')
+      var options = typeof option == 'object' && option
+
+      if (!data) $this.data('bs.affix', (data = new Affix(this, options)))
+      if (typeof option == 'string') data[option]()
+    })
+  }
+
+  var old = $.fn.affix
+
+  $.fn.affix             = Plugin
+  $.fn.affix.Constructor = Affix
+
+
+  // AFFIX NO CONFLICT
+  // =================
+
+  $.fn.affix.noConflict = function () {
+    $.fn.affix = old
+    return this
+  }
+
+
+  // AFFIX DATA-API
+  // ==============
+
+  $(window).on('load', function () {
+    $('[data-spy="affix"]').each(function () {
+      var $spy = $(this)
+      var data = $spy.data()
+
+      data.offset = data.offset || {}
+
+      if (data.offsetBottom != null) data.offset.bottom = data.offsetBottom
+      if (data.offsetTop    != null) data.offset.top    = data.offsetTop
+
+      Plugin.call($spy, data)
+    })
+  })
+
+}(jQuery);
+
+define("bootstrap/affix", ["jquery"], (function (global) {
+    return function () {
+        var ret, fn;
+        return ret || global.$.fn.affix;
+    };
+}(this)));
+
 (function() {
-  define('app/application',['backbone', 'marionette', 'app/router', 'app/controller', 'view/navigation'], function(Backbone, Marionette, Router, Controller, Navigation) {
+  define('view/sidebar_navigation',['underscore', 'backbone', 'marionette', 'templates', 'bootstrap/scrollspy', 'bootstrap/affix'], function(_, Backbone, Marionette, templates, scrollspy) {
+    return Marionette.ItemView.extend({
+      initialize: function(options) {
+        this.model = new Backbone.Model({
+          groups: []
+        });
+        return this.options.commandChannel.setHandler('sidebar:update', _.bind(this.updateSidebar, this));
+      },
+      template: templates._sidebar_navigation,
+      updateSidebar: function(groups) {
+        this.model.set({
+          'groups': groups
+        });
+        this.render();
+        $('body').scrollspy('refresh');
+        return this.$("#sidebar").affix({
+          offset: {
+            top: this.$("#sidebar").offset().top,
+            bottom: 100
+          }
+        });
+      },
+      onShow: function() {
+        return $('body').scrollspy({
+          target: "nav.bs-nav-sidebar",
+          offset: 40
+        });
+      }
+    });
+  });
+
+}).call(this);
+
+(function() {
+  define('app/application',['backbone', 'marionette', 'app/router', 'app/controller', 'view/navigation', 'view/sidebar_navigation'], function(Backbone, Marionette, Router, Controller, Navigation, Sidebar) {
     var Layout;
     Layout = Marionette.LayoutView.extend({
       regions: {
         content: ".app-content > .content-region",
+        sidebar: ".app-content > .nav",
         nav: ".navbar > .container > .content-region"
       }
     });
@@ -10725,7 +11254,11 @@ return this["App"]["Templates"];
         });
       },
       onStart: function(options) {
+        this.commandChannel = new Backbone.Wreqr.Commands();
         this.layout.nav.show(new Navigation());
+        this.layout.sidebar.show(new Sidebar({
+          commandChannel: this.commandChannel
+        }));
         new Router({
           controller: new Controller({
             app: this
@@ -10752,12 +11285,23 @@ return this["App"]["Templates"];
       underscore: "bower_components/underscore/underscore",
       backbone: "bower_components/backbone/backbone",
       marionette: "bower_components/marionette/lib/backbone.marionette",
+      bootstrap: "bower_components/bootstrap-stylus/js",
       app: "scripts/js/app",
       l10n: "scripts/js/l10n",
       templates: "scripts/js/templates",
       translations: "scripts/translations",
       config: "scripts/js/app/config",
       view: 'scripts/js/app/view'
+    },
+    shim: {
+      "bootstrap/scrollspy": {
+        deps: ["jquery"],
+        exports: "$.fn.scrollspy"
+      },
+      "bootstrap/affix": {
+        deps: ["jquery"],
+        exports: "$.fn.affix"
+      }
     }
   });
 

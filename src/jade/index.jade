@@ -17,9 +17,10 @@ html
         .content-region
 
     main
-      .container.app-content
-        .content-region
-
+      .container
+        .row.app-content
+            .content-region.col-md-9(role="main")
+            .nav(role="complementary")
     footer
       .container
         p &copy; #{facts.brand}

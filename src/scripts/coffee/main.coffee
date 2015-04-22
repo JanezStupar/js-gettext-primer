@@ -9,12 +9,25 @@ requirejs.config(
     underscore: "bower_components/underscore/underscore"
     backbone: "bower_components/backbone/backbone"
     marionette: "bower_components/marionette/lib/backbone.marionette"
+    bootstrap: "bower_components/bootstrap-stylus/js"
+
+    # Application stuff
     app: "scripts/js/app",
     l10n: "scripts/js/l10n",
     templates: "scripts/js/templates"
     translations: "scripts/translations"
     config: "scripts/js/app/config"
     view: 'scripts/js/app/view'
+
+  shim:
+    # Bootstrap stuff
+    "bootstrap/scrollspy":
+      deps: ["jquery"]
+      exports: "$.fn.scrollspy"
+    "bootstrap/affix":
+      deps: ["jquery"]
+      exports: "$.fn.affix"
+
 )
 
 define(['underscore', 'l10n', 'app/application'],

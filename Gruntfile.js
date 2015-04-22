@@ -49,7 +49,7 @@ module.exports = function(grunt) {
         },
         coffee_jshint: {
             options: {
-                globals: ['requirejs', 'define', 'console', '$', 'window']
+                globals: ['requirejs', 'define', 'console', '$', 'window', 'document']
             },
             all: ["src/scripts/coffee/**/*.coffee"]
         },
