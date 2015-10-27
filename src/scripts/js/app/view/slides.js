@@ -1,11 +1,30 @@
 (function() {
-  define(['underscore', 'backbone', 'marionette', 'l10n', 'templates'], function(_, Backbone, Marionette, l10n) {
-    return Marionette.CollectionView.extend({
+  define(['underscore', 'backbone', 'marionette', 'l10n', 'templates'], function(_, Backbone, Marionette, l10n, templates) {
+    var Slide;
+    Slide = Marionette.ItemView.extend({
       serializeData: function(model) {
         var page;
         page = this.options.page ? this.options.page + "_" : "";
         return {
           page: page
+        };
+      },
+      initialize: function(options) {
+        return this.template = this.model.get('template');
+      }
+    });
+    return Marionette.CollectionView.extend({
+      initialize: function(options) {
+        return this.collection = new Backbone.Collection(_.map(options.slides, function(e) {
+          return {
+            template: templates[e]
+          };
+        }));
+      },
+      childView: Slide,
+      childViewOptions: function() {
+        return {
+          page: this.options.page
         };
       },
       collectNav: function() {

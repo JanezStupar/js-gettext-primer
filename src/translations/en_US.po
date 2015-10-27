@@ -3,28 +3,83 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2015-04-09 17:18+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2015-04-09 15:17+0000\n"
-"Last-Translator: Janez Štupar <janez.stupar@gmail.com>\n"
-"X-Generator: Poedit 1.5.4\n"
+"POT-Creation-Date: 2015-04-27 14:39+0000\n"
 
-# where is my comment
-#. contextual comment
-#: src/scripts/js/app/view/content.js:9
-msgid "Translate this for me"
-msgstr ""
-
-#: src/scripts/js/app/view/navigation.js:7
+#: ./src/scripts/js/app/view/navigation.js:7
 msgid "Home"
 msgstr ""
 
-#: src/scripts/js/app/view/navigation.js:8
+#: ./src/scripts/js/app/view/navigation.js:8
 msgid "About"
 msgstr ""
 
-#: src/jade/templates/_content_base.jade:9
-msgid "Hello example"
+#: ./src/scripts/js/templates.js:11
+#: ./src/scripts/js/templates.js:151
+msgid "Welcome"
+msgstr ""
+
+#: ./src/scripts/js/templates.js:11
+#: ./src/scripts/js/templates.js:151
+#: ./src/jade/templates/_content_base.jade:4
+#: ./src/jade/templates/slides/about/_intro.jade:4
+msgid "Welcome to js-gettext-primer"
+msgstr ""
+
+#: ./src/scripts/js/templates.js:11
+#: ./src/jade/templates/_content_base.jade:6
+msgid "This primer is a work in progress. Content coming soon (tm)!"
+msgstr ""
+
+#: ./src/scripts/js/templates.js:11
+#: ./src/jade/templates/_content_base.jade:8
+msgid ""
+"However there is a full JavaScript gettext implementation present. Feel "
+"free to have a look around the code."
+msgstr ""
+
+#: ./src/scripts/js/templates.js:11
+msgid "Subtitle"
+msgstr ""
+
+#: ./src/scripts/js/templates.js:11
+#: ./src/jade/templates/_content_base.jade:11
+msgid "This is a subtitle"
+msgstr ""
+
+#: ./src/scripts/js/templates.js:11
+msgid "Another title"
+msgstr ""
+
+#: ./src/scripts/js/templates.js:11
+#: ./src/jade/templates/_content_base.jade:14
+msgid "This is another h1"
+msgstr ""
+
+#: ./src/scripts/js/templates.js:11
+msgid "Another subtitle"
+msgstr ""
+
+#: ./src/scripts/js/templates.js:11
+#: ./src/jade/templates/_content_base.jade:18
+msgid "Test it out"
+msgstr ""
+
+#: ./src/scripts/js/templates.js:151
+#: ./src/jade/templates/slides/about/_intro.jade:8
+msgid "This is a short primer on using gettext in pure JavaScript applications."
+msgstr ""
+
+#: ./src/scripts/js/templates.js:151
+#: ./src/jade/templates/slides/about/_intro.jade:10
+msgid ""
+"To see an example of a working gettext implementation using Coffee, Jade "
+"and Marionette, have a look at the <a "
+"href='https://github.com/JanezStupar/js-gettext-primer'>source</a>. Feel "
+"free to take inspiration and/or this project as a starting point for your "
+"translation enabaled JS application."
 msgstr ""

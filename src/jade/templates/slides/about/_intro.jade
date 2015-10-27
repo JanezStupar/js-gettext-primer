@@ -1,0 +1,44 @@
+//
+   Created by janez on 4/23/15.
+div
+  h1(id="#{page}welcome" data-nav-label="#{gettext('Welcome')}") #{gettext("Welcome to js-gettext-primer")}
+
+  p #{gettext("This is a short primer on using gettext in pure JavaScript applications.")}
+
+  // L10n: This string contains an HTML anchor (<a></a> element). Consult the HTML translation guidelines.
+  p !{gettext("To see an example of a working gettext implementation using Coffee, Jade and Marionette, have a look at the <a href='https://github.com/JanezStupar/js-gettext-primer'>source</a>. Feel free to take inspiration and/or this project as a starting point for your translation enabaled JS application.")}
+
+
+  h2(id="#{page}what-is-gettext" data-nav-label='#{gettext("What is gettext?")}' data-nav-parent='#{page}welcome') #{gettext("What is gettext?")}
+
+    // L10n: This string contains an HTML anchor (<a></a> element). Consult the HTML translation guidelines.
+  p !{gettext("The following description has been quoted from the official <a href='https://www.gnu.org/software/gettext/'>GNU gettext page</a>.")}
+
+  blockquote
+    p #{gettext("Usually, programs are written and documented in English, and use English at execution time for interacting with users. This is true not only from within GNU, but also in a great deal of proprietary and free software. Using a common language is quite handy for communication between developers, maintainers and users from all countries. On the other hand, most people are less comfortable with English than with their own native language, and would rather be using their mother tongue for day to day's work, as far as possible. Many would simply love seeing their computer screen showing a lot less of English, and far more of their own language. ")}
+
+    p #{gettext("GNU `gettext' is an important step for the GNU Translation Project, as it is an asset on which we may build many other steps. This package offers to programmers, translators, and even users, a well integrated set of tools and documentation. Specifically, the GNU `gettext' utilities are a set of tools that provides a framework to help other GNU packages produce multi-lingual messages. These tools include a set of conventions about how programs should be written to support message catalogs, a directory and file naming organization for the message catalogs themselves, a runtime library supporting the retrieval of translated messages, and a few stand-alone programs to massage in various ways the sets of translatable strings, or already translated strings...")}
+
+  // L10n: This string contains an HTML anchor (<a></a> element). Consult the HTML translation guidelines.
+  p !{gettext("And here is another one, this one I borrowed from the <a href='http://slexaxton.github.io/Jed/'>Jed project</a>.")}
+
+  blockquote
+    p #{gettext("Gettext is an old translation standard. It solves a unique set of problems when dealing with things like pluralization and positional interpolation. There are implementations of gettext in nearly every language (including javascript)...")}
+
+
+  h2(id="#{page}why-gettext" data-nav-label='#{gettext("Why should I care?")}' data-nav-parent='#{page}welcome') #{gettext("Why should I care?")}
+
+  // L10n: This string contains an HTML anchor (<a></a> element). Consult the HTML translation guidelines.
+  p !{gettext("There are many ways of translating JavaScript applications. But the sad fact is that vast majority of them suck in non-obvious ways, which will haunt you down the road if you end up using them. Besides gettext, the only other translation toolkit for JavaScript applications that I am aware of and that doesn't suck right from the get go is <a href='http://i18next.com/index.html'>i18next</a>.")}
+
+  p #{gettext("The chief reason for why these other translation toolkits do a bad job, is because they are built by people who usually speak English or indeed languages from a single language family and not much else. To put it another way, most of the regular translation toolkits are as useful for translating applications, as ASCII is for internationalized text representation. That is, not a whole lot.")}
+
+  p #{gettext("A good (useful) translation toolkit needs to have following properties:")}
+    ul
+      li #{gettext("String interpolation")}
+      li #{gettext("Support for proper pluralization")}
+      li #{gettext("A way of passing translation context to the translators")}
+      li #{gettext("Translation software/tools")}
+
+  p #{gettext("And while gettext does indeed seem complex comparing to some naive translation toolkits, there is a good reason for that. Languages are different and translating is an immensely complex topic which should not be underestimated. The good news is that doing translations right and using gettext is quite simple if you do it from the get go.")}
+

@@ -18,6 +18,7 @@ requirejs.config(
     translations: "scripts/translations"
     config: "scripts/js/app/config"
     view: 'scripts/js/app/view'
+    collection: 'scripts/js/app/collection'
 
   shim:
     # Bootstrap stuff

@@ -1,13 +1,26 @@
 define(['underscore', 'backbone', 'marionette', 'l10n', 'templates'], (_, Backbone, Marionette, l10n, templates) ->
-  return Marionette.ItemView.extend(
-
+  Slide = Marionette.ItemView.extend(
     serializeData: (model) ->
       page = if @options.page then @options.page + "_" else ""
       return {
         page: page
       }
 
-    template: templates._content_base
+    initialize: (options) ->
+      @template = @model.get('template')
+  )
+
+  return Marionette.CollectionView.extend(
+    initialize: (options) ->
+      @collection = new Backbone.Collection(_.map(options.slides, (e) ->
+        return {template: templates[e]}
+      ))
+
+    childView: Slide
+    childViewOptions: () ->
+      return {
+        page: @options.page
+      }
 
     collectNav: () ->
       # Collect entries for sidebar navigation view
